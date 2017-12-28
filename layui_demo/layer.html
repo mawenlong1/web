@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框</title>
+    <link rel="stylesheet" href="layui-v2.2.45/layui/css/layui.css">
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top:30px;">
+    <legend>例子展示</legend>
+</fieldset>
+<div class="site-demo-button" id="layerDemo" style="margin-bottom:0;">
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        为了更清晰演示，每触发下述一个例子之前，都会关闭所有已经演示的层
+    </blockquote>
+    <button data-method="setTop" class="layui-btn">多窗口模式，层叠置顶</button>
+    <button data-method="confirmTrans" class="layui-btn">配置一个投名的询问框</button>
+    <button data-method="notice" class="layui-btn">示范一个公告层</button>
+    <button data-method="offset" data-type="t" class="layui-btn layui-btn-normal">上弹出</button>
+    <button data-method="offset" data-type="b" class="layui-btn layui-btn-normal">下弹出</button>
+    <button data-method="offset" data-type="l" class="layui-btn layui-btn-normal">左弹出</button>
+    <button data-method="offset" data-type="r" class="layui-btn layui-btn-normal">右弹出</button>
+
+
+
+
+</div>
+
+
+
+<script src="jQuery/jquery-1.8.2.min.js"></script>
+<script src="layer-v3.1.1/layer/layer.js"></script>
+
+
+
+<script src="js/layer.js"></script>
+</body>
+</html>
