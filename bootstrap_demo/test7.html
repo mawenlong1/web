@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1>Hello, world!</h1>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+
+<div class="center-block jumbotron">
+    <label id="time"></label><br>
+    <button class ="btn btn-primary btn-lg"id = "btn">刷新</button><br>
+    sdc<br>
+    sdc<br>
+    scs
+</div>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<h1 class="text-hide">Custom heading</h1>
+
+
+
+
+
+<script src="jQuery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+document.getElementById("btn").onclick = function (ev) {
+
+    document.getElementById("time").innerHTML = new Date().toUTCString();
+    // var text = "cat,  bat,davf,fat";
+    // var pattern1 = /.at/g;
+    // var matches = pattern1.exec(text);
+    // alert(matches.index);
+    // alert(matches[0]);
+    // alert(pattern1.lastIndex);
+    //
+    // matches = pattern1.exec(text);
+    // alert(matches.index);
+    // alert(matches[0]);
+    // alert(pattern1.lastIndex);
+    //
+    // matches = pattern1.exec(text);
+    // alert(matches.index);
+    // alert(matches[0]);
+    // alert(pattern1.lastIndex);
+    // function createComFuncion(propertyName) {
+    //     return function (object1,object2) {
+    //         var val1 = object1[propertyName];
+    //         var val2 = object2[propertyName];
+    //         if(val1<val2){
+    //             return -1;
+    //         }else if(val1>val2){
+    //             return 1;
+    //         }else{
+    //             return 0;
+    //         }
+    //     }
+    //
+    // }
+    // var data = [{name:"Zach",age:28},{name:"Nichol",age:29},{name:"Sdscd",age:25}]
+    // var com = createComFuncion("name");
+    // // alert(com({name:"Zach",age:28},{name:"Nichol",age:29}));
+    // data.sort(createComFuncion("name"));
+    // alert(data[0].name);
+    function createPerson(name,age,job){
+        var o = new Object();
+        o.name = name;
+        o.age=age;
+        o.job = job;
+        o.sayName = function () {
+            alert(this.name);
+        };
+        return o;
+    }
+    var person1 = createPerson("dscdc",13,"dcsd");
+    person1.sayName();
+
+
+
+    function Person(name,age,job){
+        this.name = name;
+        this.age=age;
+        this.job = job;
+        this.sayName = function () {
+            alert(this.name);
+        };
+    }
+    var person2 = new Person("aaaaaaaaaa",13,"dcsd")
+    person2.sayName();
+
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>
