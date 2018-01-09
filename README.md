@@ -1,3 +1,2 @@
 # web
-web的前端学习
-linux测试
+web前端学习
