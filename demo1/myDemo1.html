@@ -12,7 +12,7 @@
     </style>
 </head>
 <body style="padding-top: 75px;background-color:#d6d9e7;" >
-<nav class="navbar navbar-default navbar-fixed-top nav-justified ">
+<nav class="navbar navbar-default navbar-fixed-top nav-justified " style="box-shadow: 0px 1px 5px 0px #6b6666;">
     <div class="container">
         <div class="navbar-header ">
             <a class="navbar-brand "style="color:blue;" href="#">知乎</a>
@@ -61,24 +61,58 @@
     <!-- 左侧-->
     <div class="col-lg-8 center-block">
         <div class="row">
-            <div  style="background-color:white;" >
+            <div  style="background-color:white;box-shadow: 1px 1px 1px 1px #abaaaa;" >
                 <span class="btn btn-lg glyphicon glyphicon-question-sign">提问</span>
 
-                <span class="btn btn-lg glyphicon glyphicon-question-sign">回答</span>
-                <span class="btn btn-lg glyphicon glyphicon-question-sign">写文章</span>
-                <span class="btn btn-lg glyphicon glyphicon-question-sign">写想法</span>
+                <span class="btn btn-lg glyphicon glyphicon-list-alt">回答</span>
+                <span class="btn btn-lg glyphicon glyphicon-edit">写文章</span>
+                <span class="btn btn-lg glyphicon glyphicon-leaf">写想法</span>
             </div>
             <br>
-            <div  style="background-color:white;padding:8px 15px;">
+            <div  style="background-color:white;padding:10px 15px;box-shadow: 1px 1px 1px 1px #928a8a;" >
                 <p style="color:grey">来自话题：计算机、人工智能</p>
                 <div class="img-responsive">
                     <a><img src="img/1.jpg"width="30" height="30">
                         <span style="">蛋蛋,</span></a>
                     <span>理工狗、盲目不从众患者、话唠、TL统治者</span></div>
+                    <h3>你写代码的起手式是什么样的？</h3>
+                    <div>
+                        蟹妖。开头说结论，windows看上去兼容了五花八门的硬件，其实本质上首先是兼容了一个核心<br>
+                        x86。在此基础上，x86芯片组提供了非常良好的扩展性，可…<a href="#" style="text-decoration:none;">阅读全文
+                        <span  class="glyphicon glyphicon-menu-down"></span></a>
+                    </div>
+                    <div class="btn-group" role="group">
+                         <button type="button" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-menu-down"></span>33
+                         </button>
+                         <button type="button" class="btn btn-primary" style="margin: 0px 2px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </button>
+
+                        <button type="button" class="btn btn-default" style="text-decoration:none;margin: 0px 5px;">
+                            <span class="glyphicon glyphicon-menu-down"></span>15条评论
+                        </button>
+
+                        <a href="#" style="text-decoration:none;color: grey;size: 30px">
+                            <span  class="glyphicon glyphicon-menu-down"></span>15条评论
+                        </a>
+                        <a href="#" style="text-decoration:none;color: grey; margin: 10px 30px;">
+                            <span  class="glyphicon glyphicon-menu-down"></span>分享
+                        </a>
+                        <a href="#" style="text-decoration:none;color: grey; margin: 10px 30px;">
+                            <span  class="glyphicon glyphicon-menu-down"></span>收藏
+                        </a>
+                        <a href="#" style="text-decoration:none;color: grey; margin: 10px 30px;">
+                            <span  class="glyphicon glyphicon-menu-down"></span>感谢
+                        </a>
+                        <a href="#" style="text-decoration:none;color: grey; margin: 10px 30px;">
+                            ...
+                        </a>
+                    </div>
             </div>
             <br>
 
-            <div  style="background-color:white;">
+            <div  style="background-color:white;box-shadow: 1px 1px 1px 1px #928a8a;">
                 <table class="table table-bordered " id="table1">
                     <input type="hidden" id="num" value="2"/>
                     <tbody>
@@ -184,10 +218,10 @@
         </div>
     </div>
     <!-- 右侧-->
-    <div class="col-lg-3 bg-success "   style="margin-left:5px">
+    <div class="col-lg-3 bg-success "   style="margin-left:5px;">
 
         <div class="affix" data-offset-top="200">
-            <div  class="bg-success"style="padding:15px;">
+            <div  class="bg-success"style="padding:15px;box-shadow: 1px 1px 1px 1px #928a8a;">
             	  
              	<span class = "btn btn-lg " width="70px" height="50px">
              		<span class="glyphicon glyphicon-globe"></span><br>
@@ -213,19 +247,30 @@
 
             </div>
 
-            <div  class="bg-success"style="margin-top:15px;" >
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
-                sdcsdcs<br/>s
+            <div  class="bg-success"style="margin-top:15px;padding:18px;box-shadow: 1px 1px 1px 1px #928a8a;" >
+                <ul class = "nav nav-pills nav-stacked">
+                	<li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>我的收藏</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>我的关注的问题</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>我的邀请</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>我的礼劵</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>社区服务中心</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>版权服务中心</a> 
+                    </li>
+                    <li class="presentation">
+                     <a href="#" style="color:grey"><span class="glyphicon glyphicon-usd"></span>公共编辑动态</a> 
+                    </li>
+                </ul>
             </div>
             <div  style="margin-top:10px;" >
                 <p color="grey">刘看山 知乎指南 知乎协议 应用 工作<br>
