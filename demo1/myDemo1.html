@@ -9,9 +9,7 @@
 </head>
 
 <body style="padding-top: 75px;background-color:#d6d9e7;">
-        <div class="well">
-                <a href="#" id="example" class="btn btn-success" rel="popover" data-content="为我的网站创建一个提示框如此简单！" data-original-title="Bootstrap弹出框">悬停弹出框</a>
-            </div>
+
     <nav class="navbar navbar-default navbar-fixed-top nav-justified " style="box-shadow: 0px 1px 5px 0px #6b6666;">
         <div class="container">
             <div class="navbar-header ">
@@ -34,12 +32,28 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button type="button" class="btn btn-link btn-lg glyphicon glyphicon-phone-alt " data-container="body"
-                         data-toggle = "popover" data-placement="left" date-content = "dddddd">
-                        </button>
+                        <!--<button type="button" class="btn btn-link btn-lg glyphicon glyphicon-phone-alt " data-container="body"-->
+                         <!--data-toggle = "popover" data-placement="left" date-content = "dddddd">-->
+                        <!--</button>-->
+                        <a class="btn btn-lg dropdown-toggle glyphicon glyphicon-phone-alt" data-toggle="dropdown" role="button" href="#">
+
+                        </a>
+                        <ul class="dropdown-menu" style="width: 200px;">
+                            <li><a href="#">
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="glyphicon glyphicon-user"></span>
+                            </a> </li>
+                            <li>
+                                <a href="#" style="text-decoration:none;color:blue;">陈安</a> 在
+                                <button class="btn btn-link"style="text-decoration:none;color:blue;">学习C++</button> 中发布了 【jMiniLang】网络篇（一）
+                            </li>
+                            <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出</a> </li>
+                        </ul>
                     </li>
                     <li>
-                        <button class="glyphicon glyphicon-envelope btn btn-link btn-lg"></button>
+                        <a href="#" id="example" class="btn btn-link glyphicon glyphicon-envelope" rel="popover"
+                           data-content="为我的网站创建一" data-placement="bottom"  data-original-title="Bootstrap弹出框"></a>
                     </li>
 
                     <li class="dropdown">
@@ -75,8 +89,10 @@
                     <div style="background-color:white;padding:10px 15px;box-shadow: 1px 1px 1px 1px #928a8a;">
                         <p style="color:grey">来自话题：计算机、人工智能</p>
                         <div class="img-responsive">
-                            <a><img src="img/1.jpg" width="30" height="30">
-                                <span style="">蛋蛋,</span></a>
+                            <a href="#" class="" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                                <img src="img/1.jpg" width="30" height="30">
+                                <span style="">蛋蛋,</span>
+                            </a>
                             <span>理工狗、盲目不从众患者、话唠、TL统治者</span>
                         </div>
                         <h3>你写代码的起手式是什么样的？</h3>
