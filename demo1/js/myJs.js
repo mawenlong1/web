@@ -1,9 +1,9 @@
-
-
-
 bindListener();
-
-$('#add').click(function () {
+$(function (){ 
+	$("#example").popover();
+});
+$('#add').click(function() {
+    alert('ss')
     $("#table1 tbody").append(" <tr >\n" +
         "        <td>1</td>\n" +
         "        <td>123</td>\n" +
@@ -15,8 +15,8 @@ $('#add').click(function () {
 
 });
 
-$('#add2').click(function () {
-    for(i=0;i<5;i++){
+$('#add2').click(function() {
+    for (i = 0; i < 5; i++) {
         $("#table1 tbody").append(" <tr >\n" +
             "        <td>1</td>\n" +
             "        <td>123</td>\n" +
@@ -26,19 +26,18 @@ $('#add2').click(function () {
     }
     bindListener();
 });
-function bindListener(){
+
+function bindListener() {
     //使用unbind防止重复绑定
-    $('.del').unbind().click(function () {
+    $('.del').unbind().click(function() {
         $(this).parent().parent().remove();
     })
-}
+};
 
 
 $('#myAffix').affix({
-    offset: {
-        top: 10,
-        bottom: function () {
-            return (this.bottom = $('.footer').outerHeight(true))
-        }
-    }
-})
+            offset: {
+                top: 100,
+                
+            }
+});
