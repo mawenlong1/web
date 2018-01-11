@@ -7,23 +7,124 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
+<div class='panel list-group'>
+    
+        <a href ='#' class='list-group-item'>item</a>
+        <a href ='#' class='list-group-item'>item</a>
+        <a href ='#' class='list-group-item'>item</a>
+        <a href ='#' class='list-group-item'>item</a>
+        <a href ='#' class='list-group-item'>item</a>
+
+    </div>
+</div>
+
+
+
+
+    <br>
+    <ul class='list-group'>
+            <li class="list-group-item"><a href="#" style="text-decoration:none;"> </li>
+            <li class="list-group-item"><a href="#"> </li>
+            <li class="list-group-item"><a href="#"> </li>
+    </ul>
+    <br>
+    <div class="list-group">
+        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user"></span>我的主页</a></a>
+        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-wrench"></span>设置</a></a>
+        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-off"></span>退出</a></a>
+    </div>
+    <br>
+    <table>
+            <tr>
+                <td><img class="" src="img/2.jpg" /></a></td>
+                <td>dd</td>
+            </tr>
+        </table>
+    <ul>
+        <li><span aria-hidden='true' class='icon_globe'></span>&nbsp;粉丝数:7389223</li>
+        <li><span aria-hidden='true' class='icon_piechart'></span>&nbsp;关注:265</li>
+    </ul>
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">公周</h3>
+            <p>纯原创微信号：公眼观察。前法官 / 专业法律咨询</p>
+        </div>
+        <div class="panel-body">
+            辞职创业
+            <hr>
+            <table>
+                <tr>
+                    <td>回答88</td>
+                    <td>文章25</td>
+                    <td>关注者41194</td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-default">关注他</button></td>
+                    <td><button class="btn btn-default">发私信</button></td>
+                    
+                </tr>
+            </table> 
+        </div>
+    </div>
+
+    <button id="custom1" class="btn btn-default" data-toggle="popover" 
+    title="显示的标题" data-placement="bottom" data-content='显示的内容'>点我</button>
+    <button id="custom" class="btn btn-default" data-toggle="popover" data-html="true" 
+    title="显示的标题" data-placement="bottom" 
+    data-content='是是是'>click</button>
+
+    <div class='panel panel-default' style='width:250px;'>
+        <div class='panel-heading'>
+            <h3 class='panel-title'>公周</h3>
+            <p>纯原创微信号：公眼观察。前法官 / 专业法律咨询</p>
+        </div>
+        <div class='panel-body'>
+            辞职创业
+            <hr>
+            <div class='col-md-4' align='center'>回答88</div>
+            <div class='col-md-4' align='center'>文章25</div>
+            <div class='col-md-4' align='center'>关注者41194</div>
+
+            <div class='col-md-6' align='center'>
+                <button class='btn btn-default' style='width:100%;'>关注他</button></div>
+            <div class='col-md-6' align='center'>
+                <button class='btn btn-default' style='width:100%;'>发私信</button></div>
+        </div>
+    </div>
+
+
+
+
 
 <a href="#" class="" data-toggle="popover" data-placement="bottom" data-trigger="hover">
 	<img class="" src="img/2.jpg" /></a>
-<script src="jQuery/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 
+
+    <script src="jQuery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
-    $(function() {
+ 
+   $(function() {
         $("[data-toggle='popover']").popover({
-            html : true,
+           /* html : true,
             title: title(),
             delay:{show:500, hide:1000},
             content: function() {
                 return content();
-            }
+            }*/
         });
+        $('#custom').attr('data-content',function(){
+                return content();
+            }
+        )
     });
+    $('#myPopover').on('hidden.bs.popover', function () {
+       
+    })
+ 
     //模拟动态加载标题(真实情况可能会跟后台进行ajax交互)
     function title() {
         return '田喜碧Hebe(节制的人生)';
@@ -31,12 +132,11 @@
 
     //模拟动态加载内容(真实情况可能会跟后台进行ajax交互)
     function content() {
-        var data = $("<form><ul><li><span aria-hidden='true' class='icon_globe'></span>&nbsp;粉丝数:7389223</li>" +
+        var data = "<form><ul><li><span aria-hidden='true' class='icon_globe'></span>&nbsp;粉丝数:7389223</li>" +
             "<li><span aria-hidden='true' class='icon_piechart'></span>&nbsp;<关注:265</li>" +
             "<li><span aria-hidden='true' class='icon_search_alt'></span>&nbsp;微博:645</li>" +
             "<li><span aria-hidden='true' class='icon_pens_alt'></span>&nbsp;所在地:台湾</li>" +
-            "<input id='btn' type='button' value='关注' onclick='test()'/></form>");
-
+            "<input id='btn' type='button' value='关注' onclick='test()'/></form>";
         return data;
     }
     //模拟悬浮框里面的按钮点击操作

@@ -11,10 +11,7 @@ $('#add').click(function() {
         "        <td><button class=\"del btn btn-primary\">删除</button> </td>\n" +
         "    </tr>");
     bindListener();
-
-
 });
-
 $('#add2').click(function() {
     for (i = 0; i < 5; i++) {
         $("#table1 tbody").append(" <tr >\n" +
@@ -26,7 +23,6 @@ $('#add2').click(function() {
     }
     bindListener();
 });
-
 function bindListener() {
     //使用unbind防止重复绑定
     $('.del').unbind().click(function() {
@@ -34,38 +30,48 @@ function bindListener() {
     })
 };
 
-
-$('#myAffix').affix({
-            offset: {
-                top: 100,
-            }
-});
 $(function() {
     $("[data-toggle='popover']").popover({
         html : true,
-        title: title(),
-        delay:{show:500, hide:1000},
-        content: function() {
-            return content();
-        }
+        //title: title(),
+        delay:{show:50, hide:50},
     });
+    $('#person_info').attr('data-content',content());
+    
+    $('#per_info').attr('data-content',content1());
+    $('#example').attr('data-content',content1());
+   
 });
 //模拟动态加载标题(真实情况可能会跟后台进行ajax交互)
 function title() {
-    return '田喜碧Hebe(节制的人生)';
+    var data = $("<h3 class='panel-title'>公周</h3>"+
+                "<p>纯原创微信号：公眼观察。前法官 / 专业法律咨询</p>");
+    return data;
 }
 
 //模拟动态加载内容(真实情况可能会跟后台进行ajax交互)
 function content() {
-    var data = $("<form><ul><li><span aria-hidden='true' class='icon_globe'></span>&nbsp;粉丝数:7389223</li>" +
-        "<li><span aria-hidden='true' class='icon_piechart'></span>&nbsp;<关注:265</li>" +
-        "<li><span aria-hidden='true' class='icon_search_alt'></span>&nbsp;微博:645</li>" +
-        "<li><span aria-hidden='true' class='icon_pens_alt'></span>&nbsp;所在地:台湾</li>" +
-        "<input id='btn' type='button' value='关注' onclick='test()'/></form>");
-
+    var data2 = "<h3 class='panel-title'>公周</h3>"+
+    "<p>纯原创微信号：公眼观察。前法官 / 专业法律咨询</p>"+
+    "    <div class='panel' style='width:220px;'>"+
+   
+    "     <div class='col-md-12' >辞职创业</div>"+
+    "   <div class='col-md-4' align='center'>回答88</div>"+
+    "   <div class='col-md-4' align='center'>文章25</div>"+
+    "  <div class='col-md-4' align='center'>关注者41194</div>"+
+    "  <div class='col-md-6' align='center'>"+
+    "     <button class='btn btn-primary' style='width:100%;'>关注他</button></div>"+
+    " <div class='col-md-6' align='center'>"+
+    "     <button class='btn btn-primary' style='width:100%;'>发私信</button></div>"+
+    "</div>";
+    return data2;
+}
+function content1(){
+    var data = "    <div class='panel' style='width:120px;'>"+ 
+    "  <div class='list-group' style=''>"+
+    "<a href='#' class='list-group-item'><span class='glyphicon glyphicon-user'></span>我的主页</a></a>"+
+    "<a href='#' class='list-group-item'><span class='glyphicon glyphicon-wrench'></span>设置</a></a>"+
+    "<a href='#' class='list-group-item'><span class='glyphicon glyphicon-off'></span>退出</a></a>"+
+    "</div></div>";
     return data;
-}
-//模拟悬浮框里面的按钮点击操作
-function test() {
-    alert('关注成功');
-}
+};

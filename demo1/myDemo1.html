@@ -36,7 +36,6 @@
                          <!--data-toggle = "popover" data-placement="left" date-content = "dddddd">-->
                         <!--</button>-->
                         <a class="btn btn-lg dropdown-toggle glyphicon glyphicon-phone-alt" data-toggle="dropdown" role="button" href="#">
-
                         </a>
                         <ul class="dropdown-menu" style="width: 200px;">
                             <li><a href="#">
@@ -45,26 +44,21 @@
                                 <span class="glyphicon glyphicon-user"></span>
                             </a> </li>
                             <li>
-                                <a href="#" style="text-decoration:none;color:blue;">陈安</a> 在
+                            <button class="btn btn-link"style="text-decoration:none;color:blue;">陈安</button> 在
                                 <button class="btn btn-link"style="text-decoration:none;color:blue;">学习C++</button> 中发布了 【jMiniLang】网络篇（一）
                             </li>
                             <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出</a> </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" id="example" class="btn btn-link glyphicon glyphicon-envelope" rel="popover"
-                           data-content="为我的网站创建一" data-placement="bottom"  data-original-title="Bootstrap弹出框"></a>
+                        <a href="#" id="example" class="btn btn-lg btn-link glyphicon glyphicon-envelope" data-trigger='click'
+                         data-placement="bottom" data-toggle='popover' data-html='true'></a>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
+                    <li class="">
+                        <a id = "per_info" data-trigger="click" data-toggle="popover" data-placement="bottom" data-html="true"  href="#">
                             <img src="img/2.jpg" width="30" height="30">
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span>我的主页</a> </li>
-                            <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>设置</a> </li>
-                            <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出</a> </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -89,9 +83,9 @@
                     <div style="background-color:white;padding:10px 15px;box-shadow: 1px 1px 1px 1px #928a8a;">
                         <p style="color:grey">来自话题：计算机、人工智能</p>
                         <div class="img-responsive">
-                            <a href="#" class="" data-toggle="popover" data-placement="bottom" data-trigger="hover">
+                            <a href="#" id='person_info' style="text-decoration:none;" data-toggle="popover" data-placement="bottom" data-trigger="hover">
                                 <img src="img/1.jpg" width="30" height="30">
-                                <span style="">蛋蛋,</span>
+                                蛋蛋,
                             </a>
                             <span>理工狗、盲目不从众患者、话唠、TL统治者</span>
                         </div>
