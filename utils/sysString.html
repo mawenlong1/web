@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String组件演示</title>
+    <link rel="stylesheet" type="text/css" href="fronutlils/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+字符串1：<input id ='str1'type="text">
+字符串2：<input id ='str2'type="text"><br>
+<button class="btn btn-primary" id="empty">判断是否为空</button>
+<button class="btn btn-primary" id="equal">判断是否相等</button>
+<button class="btn btn-primary" id="isEqualIgnorecase">忽略大小写判断是否相等</button>
+<button class="btn btn-primary" id="isNum">判断是否为数字</button>
+<button class="btn btn-primary" id="isEmail">判断是否为邮箱</button>
+<button class="btn btn-primary" id="isChinese">判断是否为中文</button>
+<br>
+<button class="btn btn-primary" id="replaceAll">替换所有</button>
+
+
+
+
+
+<script src="fronutlils/jquery/jquery-1.11.0.min.js"></script>
+<script src="fronutlils/bootstrap/js/bootstrap.min.js"></script>
+<script src="fronutlils/layer/layer.js"></script>
+<script src="fronutlils/utils/sysString.js"></script>
+<script>
+    $(function () {
+        $('#empty').click(function () {
+            var str = $('#str1').val();
+            alert(sysString.isEmpty(str));
+        });
+        $('#equal').click(function () {
+            var str1 = $('#str1').val();
+            var str2 = $('#str2').val();
+            alert(sysString.isEqual(str1,str2));
+        });
+        $('#isEqualIgnorecase').click(function () {
+            var str1 = $('#str1').val();
+            var str2 = $('#str2').val();
+            alert(sysString.isEqualIgnorecase(str1,str2));
+        });
+        $('#isNum').click(function () {
+            var str1 = $('#str1').val();
+            alert(sysString.isNum(str1));
+        });
+        $('#isEmail').click(function () {
+            var str1 = $('#str1').val();
+            alert(sysString.isEmail1(str1));
+        });
+        $('#isChinese').click(function () {
+            var str1 = $('#str1').val();
+            alert(sysString.isChinese(str1));
+        });
+        $('#replaceAll').click(function () {
+            var str1 = $('#str1').val();
+            alert(sysString.replaceAll('1,233,33.45',',','#$'));
+        });
+
+    });
+</script>
+</body>
+</html>

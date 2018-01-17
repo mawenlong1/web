@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date组件演示</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<p>sysDate依赖sysString</p>
+<button class="btn btn-primary" id ='date'>获取日期</button>
+<button class="btn btn-primary" id ='date1'>获取详细日期</button>
+<button class="btn btn-primary" id ='year'>获取年</button>
+<button class="btn btn-primary" id ='month'>获取月</button>
+<button class="btn btn-primary" id ='diff'>计算两个日期天数之差</button>
+<button class="btn btn-primary" id ='week'>获取星期</button>
+<button class="btn btn-primary" id ='str2Date'>字符串转化为日期</button>
+
+<script src="fronutlils/jquery/jquery-1.11.0.min.js"></script>
+<script src="fronutlils/bootstrap/js/bootstrap.min.js"></script>
+<script src="fronutlils/layer/layer.js"></script>
+<script src="fronutlils/utils/sysAlert.js"></script>
+<script src="fronutlils/utils/sysString.js"></script>
+<script src="fronutlils/utils/sysDate.js"></script>
+<script>
+    $(function(){
+        $("#date").click(function(){
+            sysAlert.confirm(sysDate.getNowDate());
+        });
+        $("#date1").click(function(){
+            sysAlert.confirm(sysDate.getNowDateTime());
+        });
+        $("#year").click(function(){
+            sysAlert.confirm(sysDate.getYear());
+        });
+        $("#month").click(function(){
+            sysAlert.confirm(sysDate.getMonth()+1);
+        });
+        $("#diff").click(function(){
+            var b = '2017-12-01'
+            var e = '2018-05-05'
+            sysAlert.confirm(sysDate.daydiff(b,e));
+        });
+
+        $("#week").click(function(){
+            sysAlert.confirm(sysDate.getWeek());
+        });
+        $("#str2Date").click(function(){
+            sysAlert.confirm(sysDate.strToDate('2017-01-01')+'');
+        });
+
+    });
+</script>
+</body>
+</html>

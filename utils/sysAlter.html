@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>sysAlert实例</title> 
+	<meta name="description" content="This is an example to create Popover with Bootstrap.">
+	<link rel="stylesheet" type="text/css" href="fronutlils/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<button class="btn btn-primary" id ='alert'>警告框</button>
+<button class="btn btn-primary" id ='open'>打开新窗口</button>
+<button class="btn btn-primary" id ='msg'>消息窗口</button>
+<button class="btn btn-primary" id ='error'>错误窗口</button>
+<button class="btn btn-primary" id ='detailError'>详细错误信息窗口</button>
+<button class="btn btn-primary" id ='confirm'>确认窗口</button>
+<div id='context' class="">
+    contextcontextcontextcontext
+</div>
+<script src="fronutlils/jquery/jquery-1.11.0.min.js"></script>
+<script src="fronutlils/bootstrap/js/bootstrap.min.js"></script>
+<script src="fronutlils/layer/layer.js"></script>
+<script src="fronutlils/utils/sysAlert.js"></script>
+<script>
+    $(function(){ 
+    　　$("#alert").click(function(){ 
+            sysAlert.alert('ss');
+    　　});   
+        $("#open").click(function(){ 
+            sysAlert.open('打开新窗口',300,400,'context')
+        }); 
+        $("#msg").click(function(){ 
+            sysAlert.msg('提示消息');
+        });     
+        $("#error").click(function(){ 
+            sysAlert.error('出错了！！！！');
+        });   
+        $("#detailError").click(function(){ 
+            sysAlert.detailError('客户看的错误消息','开发人员看的错误消息').index('dd');
+        });
+        $("#confirm").click(function(){
+            sysAlert.confirm('是否确认');
+        });
+    }); 
+
+</script>
+
+	
+</body>
+</html>

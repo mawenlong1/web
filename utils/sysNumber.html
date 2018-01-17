@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number组件演示</title>
+    <link rel="stylesheet" type="text/css" href="fronutlils/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<input id ='number'type="text"><br>
+<button class="btn btn-primary" id="bin">判断是否为二进制数</button>
+<button class="btn btn-primary" id="int">判断是否为整数</button>
+<button class="btn btn-primary" id="float">判断是否为浮点数</button>
+<button class="btn btn-primary" id="hex">判断是否为16进制数</button>
+<button class="btn btn-primary" id="format">格式化数字</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="fronutlils/jquery/jquery-1.11.0.min.js"></script>
+<script src="fronutlils/bootstrap/js/bootstrap.min.js"></script>
+<script src="fronutlils/layer/layer.js"></script>
+<script src="fronutlils/utils/sysAlert.js"></script>
+<script src="fronutlils/utils/sysString.js"></script>
+<script src="fronutlils/utils/sysNumber.js"></script>
+<script>
+    $(function () {
+        $('#bin').click(function () {
+            var num = $('#number').val();
+            alert(num+':'+sysNumber.isBin(num))
+        });
+        $('#int').click(function () {
+            var num = $('#number').val();
+            alert(num+':'+sysNumber.isInt(num))
+        });
+        $('#float').click(function () {
+            var num = $('#number').val();
+            alert(num+':'+sysNumber.isFloat(num))
+        });
+        $('#hex').click(function () {
+            var num = $('#number').val();
+            alert(num+':'+sysNumber.isHex(num))
+        });
+        $('#format').click(function () {
+            var num = $('#number').val();
+            alert(sysNumber.formatNum(num))
+        })
+    });
+</script>
+</body>
+</html>
